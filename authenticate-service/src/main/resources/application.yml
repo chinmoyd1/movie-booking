@@ -1,0 +1,18 @@
+zuul:
+  routes:
+    notification-service:
+      path: /notification-service/**
+      serviceId: notification-service
+    booking-service:
+      path: /booking-service/**
+      serviceId: booking-service
+    theatre-service:
+      path: /theatre-service/**
+      serviceId: theatre-service
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          netflix: trace
