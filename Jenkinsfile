@@ -9,7 +9,7 @@ node {
           sh "pwd"
           sh "${mvnCMD} --version"
           echo 'Building..'
-          sh "${mvnCMD} clean install -s mvn-settings.xml"
+          sh "${mvnCMD} clean install -s ../mvn-settings.xml"
       }    
     }
 }
