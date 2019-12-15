@@ -26,8 +26,8 @@ node {
           sh 'mvn clean install -Dmaven.test.skip=true'
       }    
     }
-    stage('build-notfiacation-service'){
-      dir("${env.WORKSPACE}/notfiacation-service"){
+    stage('build-notifiacation-service'){
+      dir("${env.WORKSPACE}/notifiacation-service"){
           sh "pwd"
           sh 'mvn clean install -Dmaven.test.skip=true'
       }    
