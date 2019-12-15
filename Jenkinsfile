@@ -21,19 +21,19 @@ node {
       }    
     }
     stage('build-booking-service'){
-        dir("${env.WORKSPACE}/booking-service"){
+       dir("${env.WORKSPACE}/booking-service"){
           sh "pwd"
           sh 'mvn clean install -Dmaven.test.skip=true'
       }    
     }
-    stage('build-notfiacation-service')
+    stage('build-notfiacation-service'){
       dir("${env.WORKSPACE}/notfiacation-service"){
           sh "pwd"
           sh 'mvn clean install -Dmaven.test.skip=true'
       }    
     }
     stage('build-theatre-service'){
-        dir("${env.WORKSPACE}/theatre-service"){
+       dir("${env.WORKSPACE}/theatre-service"){
           sh "pwd"
           sh 'mvn clean install -Dmaven.test.skip=true'
       }    
