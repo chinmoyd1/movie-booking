@@ -3,7 +3,7 @@ node{
       git 'https://github.com/chinmoyd1/movie-booking'
   }
   stage('build-discovery-service'){
-    dir("${env.WORKSPACE}/discovery-service"){
+    dir("${env.WORKSPACE}/dicovery-service"){
         sh "pwd"
     }
      echo 'Building..'
