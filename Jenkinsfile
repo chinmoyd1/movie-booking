@@ -5,9 +5,19 @@ node {
     stage('build-discovery-service'){
       dir("${env.WORKSPACE}/dicovery-service"){
           sh "pwd"
-          sh 'mvn --version'
-          echo 'Building..'
-          sh 'mvn -X clean install -s ../mvn-settings.xml'
+          sh 'mvn clean install'
+      }    
+    }
+    stage('build-turbine-service'){
+      dir("${env.WORKSPACE}/turbine-service"){
+          sh "pwd"
+          sh 'mvn clean install'
+      }    
+    }
+    stage('build-turbine-service'){
+      dir("${env.WORKSPACE}/authenticate-service"){
+          sh "pwd"
+          sh 'mvn clean install'
       }    
     }
 }
