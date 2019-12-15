@@ -7,7 +7,7 @@ node {
           sh "pwd"
           sh 'mvn clean install -Dmaven.test.skip=true'
 	  sh 'docker build -t rick1113/dicovery-service .'
- 	  sh 'docker login -u rick113 -p $BBa+x4aG%@.LFM'
+ 	  sh 'docker login -u rick1113 -p $BBa+x4aG%@.LFM'
 	  sh 'docker push rick1113/dicovery-service'
       }    
     }
