@@ -1,8 +1,4 @@
-pipeline {
-    agent any
-    tools {
-        maven 'apache-maven-3.0.1' 
-    }
+node {
     stage('SCM Checkout'){
         git 'https://github.com/chinmoyd1/movie-booking'
     }
