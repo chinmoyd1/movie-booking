@@ -5,7 +5,7 @@ node {
     stage('build-authenticate-service'){
       dir("${env.WORKSPACE}/authenticate-service"){
           sh "pwd"
-          sh 'mvn clean install'
+          sh 'mvn clean install -Dmaven.test.skip=true'
       }    
     }
 }
