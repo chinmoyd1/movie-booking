@@ -8,8 +8,9 @@ node {
           sh 'mvn clean install -Dmaven.test.skip=true'
 	  sh 'docker build -t rick1113/dicovery-service .'
  	  sh "docker login -u rick1113 -p '$BBa+x4aG%@.LFM'"
-	  sh '**************Pushing*********************'
+	  sh 'echo "**************Pushing*********************"'
 	  sh 'docker push rick1113/dicovery-service'
+	  sh 'echo "**************PushedSuccessfully*********************"'
       }    
     }
     stage('build-turbine-service'){
